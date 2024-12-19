@@ -27,7 +27,7 @@ const NavBar = () => {
   return (
     <div className={
       MenuOpen
-      ? "border-b-[1px] border-b-solid  md:flex-row  md:justify-evenly   md:h-[50px] md:w-[100%] md:bg-none border-b-slate-600 flex absolute  flex-col items-center justify-around h-screen w-screen bg-gradient-to-t from-[#FFB8B8] to-[#1E1E1E]"
+      ? "  md:flex-row  md:justify-evenly   md:h-[50px] md:w-[100%] md:bg-none flex absolute  flex-col items-center justify-around h-screen w-screen bg-gradient-to-t from-[#FFB8B8] to-[#1E1E1E]"
       : "flex  absolute items-center justify-around  h-[50px] w-[100%] "
       }
     >
@@ -39,7 +39,7 @@ const NavBar = () => {
             color="#f1f1f1" 
             size={30}
           />
-          <p>Ecomerce Shop</p>
+          <p className="text-cl text-gray-100 font-semibold">Ecomerce Shop</p>
           <AiOutlineShoppingCart
             cursor={"pointer"} 
             color="#f1f1f1" 
