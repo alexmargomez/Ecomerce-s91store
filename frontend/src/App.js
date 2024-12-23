@@ -3,15 +3,21 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './Components/NavBar';
 import HomeScreen from "./Screens/HomeScreen";
+import Footer from './Components/Footer';
+import ProductScreen from './Screens/ProductScreen';
+import CartScreen from './Screens/CartScreen';
 function App() {
   return (
-    <div className="flex flex-col min-h-screen min-w-full bg-gradient-to-t from-[#f1f1f1] to-[#38bdb2]">
+    <div className="flex flex-col min-h-screen min-w-full ">
       <Router>
         <NavBar />
         <Routes>
           <Route path = "/" element={<HomeScreen />} />
+          <Route path = "/shop" element={<ProductScreen />} />
+          <Route path = "/cart" element={<CartScreen />} /> 
         </Routes>
       </Router>
+      <Footer />
     </div>
   );
 }

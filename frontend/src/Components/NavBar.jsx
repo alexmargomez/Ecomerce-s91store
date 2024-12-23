@@ -4,20 +4,16 @@ import { Link } from 'react-router-dom';
 
 const links=[
     {
-      name: 'Home',
+      name: 'Acerca de',
       link: '/',
     },
     {
-      name: 'Shop',
+      name: 'Comprar',
       link: '/shop',
     },
     {
-      name: 'Orders',
-      link: '/orders',
-    },
-    {
-      name: 'Logout',
-      link: '/logout',
+      name: 'Nosotros',
+      link: '/',
     },
 ];
 const NavBar = () => {
@@ -25,53 +21,43 @@ const NavBar = () => {
   const[MenuOpen, setMenuOpen] =   useState(false);
 
   return (
-    <div className={
-      MenuOpen
-      ? "  md:flex-row  md:justify-evenly   md:h-[50px] md:w-[100%] md:bg-none flex absolute  flex-col items-center justify-around h-screen w-screen bg-gradient-to-t from-[#FFB8B8] to-[#1E1E1E]"
-      : "flex  absolute items-center justify-around  h-[50px] w-[100%] "
-      }
-    >
-      {!MenuOpen && 
-        <>
-          <AiOutlineMenu 
-            onClick={() => setMenuOpen(true)}
-            cursor={"pointer"}
-            color="#f1f1f1" 
-            size={30}
-          />
-          <p className="text-cl text-gray-100 font-semibold">Ecomerce Shop</p>
-          <AiOutlineShoppingCart
-            cursor={"pointer"} 
-            color="#f1f1f1" 
-            size={30} 
-          />
-        </>
-      }
-      
-      {MenuOpen && (
-        <>
-          <div>
-            
-          </div>
-          {links.map((l) => (
-              <Link 
-                className="flex pl-10 pr-10 text-2x1 font-semibold w-15 text-[#f1f1f1]"
+    <div className= "flex items-center justify-between h-[50px] w-full shadow-md">
+      <div className='flex-1 flex justify-center'>
+        <Link to="/cart">
+          <AiOutlineShoppingCart cursor="pointer" size={30} />
+        </Link>
+      </div>
+      <div className=" flex-1 flex justify-center">
+        {!MenuOpen ? (
+          <h1 >
+            <Link className="text-3xl font-bold text-stroke" to="/">S91 STORE</Link>
+          </h1>
+        ) : (
+          <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-10">
+            {links.map((l, index) => (
+              <Link
+                key={index}
                 to={l.link}
-                onClick={()=>setMenuOpen(false)}
+                onClick={() => setMenuOpen(false)}
+                className={`${
+                  l.name === "Comprar" ? " outline outline-2 outline-black px-2 py-1 " : ""
+                }`}
               >
                 {l.name}
+
               </Link>
             ))}
-          <div>
-            <AiOutlineClose 
-              cursor={"pointer"}
-              color="#f1f1f1" 
-              size={30} 
-              onClick={()=>setMenuOpen(false)}
-            />
           </div>
-        </>
-      )}
+        )}
+      </div>
+
+      <div className='flex-1 flex justify-center'>
+        <AiOutlineMenu
+          onClick={() => setMenuOpen(!MenuOpen)}
+          cursor="pointer"
+          size={30}
+        />
+      </div>
     </div>
   )
 };
