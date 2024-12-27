@@ -8,14 +8,16 @@ import ProductScreen from './Screens/ProductScreen';
 import CartScreen from './Screens/CartScreen';
 function App() {
   return (
-    <div className="flex flex-col min-h-screen min-w-full ">
+    <div className="flex flex-col min-h-screen">
       <Router>
         <NavBar />
-        <Routes>
-          <Route path = "/" element={<HomeScreen />} />
-          <Route path = "/shop" element={<ProductScreen />} />
-          <Route path = "/cart" element={<CartScreen />} /> 
-        </Routes>
+        <div className="flex-grow overflow-hidden">
+          <Routes>
+            <Route path = "/" element={<HomeScreen />} />
+            <Route path = "/shop" element={<ProductScreen />} />
+            <Route path = "/cart" element={<CartScreen />} /> 
+          </Routes>
+        </div>
       </Router>
       <Footer />
     </div>

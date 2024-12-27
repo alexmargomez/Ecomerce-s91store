@@ -1,15 +1,18 @@
 import React from 'react'
+import Imgslider from '../Components/Imgslider';
 
 const HomeScreen = () => {
   return(
-    <div className='p-14 flex-col justify-center pb-40 flex w-screen '>
-      <section>
-        <aside> 
-
-          
-        </aside>
+    <div >
+      <section ide="publicidad" className="h-[calc(100vh-50px)]">
+        <Imgslider />
       </section>
-      
+      <section id="acerca-de">
+
+      </section>
+      <section id="nosotros">
+        
+      </section>
     </div>
   ); 
 };
