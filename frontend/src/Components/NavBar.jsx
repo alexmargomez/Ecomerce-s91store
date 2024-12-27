@@ -21,7 +21,7 @@ const NavBar = () => {
   const[MenuOpen, setMenuOpen] =   useState(false);
 
   return (
-    <div className= "flex items-center justify-between h-[50px] w-full shadow-md ">
+    <div className= "fixed top-0 left-0  z-10 flex items-center justify-between h-[50px] w-full shadow-md  bg-gradient-to-r from-slate-50">
       <div className='flex-1 flex justify-center'>
         <Link to="/cart">
           <AiOutlineShoppingCart cursor="pointer" size={30} />
