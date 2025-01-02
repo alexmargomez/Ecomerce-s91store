@@ -3,8 +3,8 @@ import logo from '../assets/img/logo.svg';
 
 const Footer = () => {
   return (
-    <div>
-      <div className='flex pt-10'>
+    <div> 
+      <div className='flex font-semibold'>
         <div className='w-1/3 flex flex-col p-10 pr-0'>
           <p className='h-1/2 flex items-center justify-end'>@S91STORE</p>
           <p className='h-1/2 flex items-center justify-end '>3245022628</p>
