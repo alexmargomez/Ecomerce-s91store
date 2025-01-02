@@ -6,9 +6,8 @@ import { Ri24HoursFill } from "react-icons/ri";
 
 const HomeScreen = () => {
   return(
-    <div>
+    <>
       {/* Slider Home */}
-      <div id="publicidad" className='pt-[50px] '/>
       <section className="h-[calc(100vh-50px)]">
         <Imgslider />
       </section>
@@ -62,7 +61,7 @@ const HomeScreen = () => {
         </div>
         <h2 className='text-2xl text-white font-semibold bg-green-500 p-2 text-center' >Contactenos en nustras redes sociales</h2>
       </section>
-    </div>
+    </>
   ); 
 };
 
