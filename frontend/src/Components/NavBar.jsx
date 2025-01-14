@@ -43,6 +43,9 @@ const NavBar = () => {
   };
 
   return (
+
+    <>
+    <div id="navbar" className='pt-[50px] '/>
     <div className="fixed top-0 left-0 z-10 flex items-center justify-between h-[50px] w-full shadow-md bg-gradient-to-r from-slate-50">
       <div className="flex-1 flex justify-center">
         <Link to="/cart">
@@ -55,7 +58,7 @@ const NavBar = () => {
             <Link 
               className="text-3xl font-bold text-stroke" 
               to="/"
-              onClick={(e) => handleScrollToSection(e, "#publicidad")}
+              onClick={(e) => handleScrollToSection(e, "#navbar")}
             >
               S91 STORE
             </Link>
@@ -95,6 +98,8 @@ const NavBar = () => {
         )}
       </div>
     </div>
+    </>
+    
   );
 };
 

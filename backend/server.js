@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 const app= express();
 
 dotenv.config();
+console.log(process.env.PORT);
 app.get('/',(req, res) => {
     res.send("funcionando");
 });

@@ -5,7 +5,7 @@ import p3 from "../assets/img/P3.jpg";
 
 const images = [p1, p2, p3];
 
-function ImageSlider() {
+const ImageSlider = () =>{
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
