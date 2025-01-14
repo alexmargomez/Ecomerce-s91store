@@ -22,7 +22,7 @@ Asegúrate de tener instalados los siguientes programas en tu máquina:
 
 2. Instala las dependencias del backend:
     ```sh
-    npm install nodemon --save-dev: instalar nodemon
+    npm install nodemon --save-dev
     npm install
     ```
 
