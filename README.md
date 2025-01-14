@@ -22,6 +22,7 @@ Asegúrate de tener instalados los siguientes programas en tu máquina:
 
 2. Instala las dependencias del backend:
     ```sh
+    npm install nodemon --save-dev: instalar nodemon
     npm install
     ```
 
@@ -68,7 +69,7 @@ La aplicación de React debería estar corriendo en `http://localhost:3000`.
 ## Scripts Disponibles
 
 ### Backend
-- `npm install nodemon --save-dev`: instalar nodemon
+
 - `npm start`: Inicia el servidor de desarrollo.
 - `npm run dev`: Inicia el servidor de desarrollo con nodemon para recargar automáticamente al guardar.
 - `npm test`: Ejecuta las pruebas del backend.
