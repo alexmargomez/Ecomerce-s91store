@@ -1,4 +1,8 @@
 {
+  "name": "ecommerce-s91store",
+  "version": "1.0.0",
+  "type": "module", 
+  "main": "server.js",
   "scripts": {
     "test": "jest",
     "start": "node server.js",
