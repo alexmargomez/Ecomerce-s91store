@@ -9,3 +9,5 @@ export const createProduct = async(name, description, price, imageLink) => {
     return result;
 
 };
+
+export default createProduct;

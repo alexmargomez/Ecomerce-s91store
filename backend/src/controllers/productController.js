@@ -1,6 +1,6 @@
-import { createProduct } from "../models/productModel.js";
+import createProduct from "../models/productModel.js";
 
-export const createProductController = async (req, res) => {
+const createProductController = async (req, res) => {
 
     try {
         const {name, description, price, imageLink} = req.body;
@@ -11,3 +11,5 @@ export const createProductController = async (req, res) => {
         res.status(500).json({ message: 'Error al crear el producto: ' + error.message });
     }
 };
+
+export default createProductController;
