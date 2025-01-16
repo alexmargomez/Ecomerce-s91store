@@ -4,7 +4,7 @@ import router from './src/routes/productRoutes.js';
 
 const app= express();
 dotenv.config();
-
+app.use('/uploads', express.static('./src/uploads'));
 app.use(express.json());
 app.use('/',router);
 

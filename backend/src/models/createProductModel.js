@@ -6,7 +6,7 @@ export const createProduct = async(name, description, price, imageLink) => {
         VALUES(?,?,?,?)
     `;
     const [result] = await pool.execute(query, [name, description, price, imageLink]);
-    return result;
+    return result.insertId;
 
 };
 
