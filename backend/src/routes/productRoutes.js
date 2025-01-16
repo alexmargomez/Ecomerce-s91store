@@ -6,7 +6,11 @@ import updateProductController from '../controllers/updateProductController.js';
 const router = express.Router();
 
 router.get('/',(req, res) => {
+<<<<<<< HEAD
     console.log(req.body);
+=======
+    
+>>>>>>> 483dff3 (Metodos (GET, PUT, DELETE). Ademas de subir IMG.)
     res.send("funcionando");
 });
 
