@@ -4,7 +4,7 @@ import ProductDetails from '../Components/ProductDetails'
 
 const ProductScreen = () => {
   return (
-    <div className='flex flex-col h-screen pr-4 pl-4'>
+    <div className='flex flex-col pr-4 pl-4'>
     <section className='p-2 flex items-center justify-center '>
         <div className=' flex w-full max-w-4xl'>
           <div className='flex-grow p-1'>
@@ -23,7 +23,7 @@ const ProductScreen = () => {
         <aside className='w-1/5 bg-slate-100'>
           {/*espacio para los filtros de busqueda*/}
         </aside>
-        <div className='w-full'>
+        <div className='w-full p-10 '>
           <ProductDetails />
         </div>
     </section>
