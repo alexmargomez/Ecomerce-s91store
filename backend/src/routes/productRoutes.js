@@ -23,4 +23,5 @@ router.put('/update/:id', (req, res) =>{
     console.log(`Se recibio la solicitud para modificar el ID ${req.params.id}`);
     updateProductController(req, res);
 });
+
 export default router;
