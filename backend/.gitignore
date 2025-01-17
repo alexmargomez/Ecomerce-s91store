@@ -13,7 +13,8 @@ yarn-error.log*
 .env.development
 .env.production
 .env.test
-.jpg
+*.jpg
+*.png
 
 # build
 /dist

@@ -2,11 +2,13 @@ import express from 'express';
 import createProductController from '../controllers/createProductController.js';
 import deleteProductController from '../controllers/deleteProductController.js';
 import updateProductController from '../controllers/updateProductController.js';
+import consultProductController from '../controllers/consultProductController.js';
 
 const router = express.Router();
 
-router.get('/',(req, res) => {
-    res.send("funcionando");
+router.get('/product',(req, res) => {
+    console.log("Se recibió una solicitud de consulta Productos");
+    consultProductController(req, res);
 });
 
 router.post('/create', (req, res) => {
